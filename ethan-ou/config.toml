@@ -36,16 +36,16 @@ googleAnalytics = "UA-123-45"
 
 # main menu
 [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Blog"
+    url = "/blog/"
     weight = 1
 [[menu.main]]
     name = "Works"
     url = "/works-index/"
     weight = 2
 [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
+    name = "About"
+    url = "/about/"
     weight = 3
 
 # Add footer contents here
