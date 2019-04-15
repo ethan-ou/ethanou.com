@@ -9,21 +9,21 @@ disqusShortname = "yourdisqusshortname"
 googleAnalytics = "UA-123-45"
 
 [params]
-    description = "Conan Doyle's personal website"
+    description = "Ethan Ou's personal website"
     keywords = "mystery, history, medicine"
     images = [""]
 
 [author]
-    name = "Sir Arthur Conan Doyle"
+    name = "Ethan Ou"
 
 [social]
-    twitter = "BakerStJournal"
+    twitter = ""
     facebook = ""
     facebook_admin = ""
     linkedin = ""
     instagram = ""
     googleplus = ""
-    github = ""
+    github = "ethan-ou"
     gitlab = ""
     pinterest = ""
     tumblr = ""
