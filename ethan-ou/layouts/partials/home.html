@@ -2,9 +2,10 @@
  {{ range where .Data.Pages "Section" "home" }}
         <article class="post post--{{ .Params.class }}">
             <h2 class="post__title system-sans-serif near-black">{{ .Title }}</h2>
-            <section class="post__content sans-serif dark-gray">
+            <section class="post__content sans-serif lh-copy dark-gray measure">
                 {{ .Content }}
             </section>
+            <br>
         </article>
     {{ end }}
 </div>
