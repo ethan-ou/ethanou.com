@@ -1,7 +1,6 @@
 baseurl = ""
 languageCode = "en-us"
 title = "Ethan Ou"
-theme = ""
 
 canonifyurls = true
 paginate = 3
