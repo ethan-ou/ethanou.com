@@ -1,19 +1,21 @@
 <div class="container w-100 center page mt mt-6 ph3 ph4-ns mw8">
     <article class="post post--{{ .Params.class }}">
-        <header class="post__title system-sans-serif lh-title near-black tc pa3">
-            <h1>{{ .Title }}</h1>
+        <header>
+            <h1 class="post__title system-sans-serif lh-title near-black tc pa3">{{ .Title }}</h1>
+            <span class="post__meta-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+            <p class="lh-copy system-sans-serif"> - {{ .ReadingTime}} minutes read</p>
+            <p class="lh-copy system-sans-serif"> - {{ .WordCount}} words</p>
         </header>
+        
         <section class="post__content lh-copy system-sans-serif mw7 center">
+
             {{ .Content }}
         </section>
         <footer class="post__meta">
-            <span class="post__meta-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006. 1. 2" }}</time></span>
+            
             {{ partial "taxonomies" . }}
         </footer>
     </article>
-    <section class="comment">
-        {{ template "_internal/disqus.html" . }}
-    </section>
     <nav class="p-pagination">
         <div class="p-pagination__newer">
             {{ if .PrevInSection }}
