@@ -1,0 +1,17 @@
+/* @import url('https://rsms.me/inter/inter.css');
+  html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+} */
+
+
+
+/*
+CUSTOM THEME:
+
+.theme-blue { color: #0000aa; }
+
+.bg-theme-blue { background-color: #0000aa; }
+
+.hover-theme-blue:hover { color: #0000aa; }
+.hover-theme-blue:focus { color: #0000aa; } */
