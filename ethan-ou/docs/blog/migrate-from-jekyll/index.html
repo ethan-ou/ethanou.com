@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>
+    Migrate to Hugo from Jekyll | Ethan Ou
+</title><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="Sir Arthur Conan Doyle">
+<meta name="description" content="Conan Doyle&#39;s personal website">
+<meta name="keywords" content="mystery, history, medicine">
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="Migrate to Hugo from Jekyll"/>
+<meta name="twitter:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like
+▾ &lt;root&gt;/ ▾ images/ logo.png  should become
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static."/>
+<meta name="twitter:site" content="@BakerStJournal"/>
+
+<meta property="og:title" content="Migrate to Hugo from Jekyll" />
+<meta property="og:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like
+▾ &lt;root&gt;/ ▾ images/ logo.png  should become
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/migrate-from-jekyll/" />
+
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2014-03-10T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2014-03-10T00:00:00&#43;00:00"/>
+
+
+<base href="">
+
+<link rel="canonical" href="/blog/migrate-from-jekyll/">
+
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css" crossorigin="anonymous">
+
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+
+
+
+<meta name="generator" content="Hugo 0.54.0" /></head>
+    <body><header id="header" class="w-100 pa3 pa4-ns">
+    <div class="container db dt-ns mw8 center w-100">
+        <div class="dtc-ns v-mid tl-ns w-50-ns w-100 tc">
+            <a href="" class="title link dib black-90 b f4 dib">Ethan Ou</a>
+        </div>
+        <nav class="navigation dtc-ns v-mid w-100 tr-ns mt2 tc">
+                <a href="/blog/" class="link dim black f6 f5-ns dib ph2 pv1">Blog</a></li>
+                <a href="/works-index/" class="link dim black f6 f5-ns dib ph2 pv1">Works</a></li>
+                <a href="/about/" class="link dim black f6 f5-ns dib ph2 pv1">About</a></li>
+                
+        </nav>
+    </div>
+</header><main id="main">
+    <div class="container">
+    <article class="post post--">
+        <header class="post__title">
+            <h1>Migrate to Hugo from Jekyll</h1>
+        </header>
+        <section class="post__content">
+            
+
+<h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
+
+<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.<br />
+With Jekyll, something that looked like</p>
+
+<pre><code>▾ &lt;root&gt;/
+    ▾ images/
+        logo.png
+</code></pre>
+
+<p>should become</p>
+
+<pre><code>▾ &lt;root&gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+</code></pre>
+
+<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
+
+<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
+
+<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
+
+<h2 id="set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></h2>
+
+<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+
+<ol>
+<li><p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+
+<pre><code>git submodule deinit _site
+git rm _site
+git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
+</code></pre></li>
+
+<li><p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+
+<pre><code>{
+    ..
+    &quot;publishdir&quot;: &quot;_site&quot;,
+    ..
+}
+</code></pre></li>
+</ol>
+
+<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
+
+<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+
+<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
+
+<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
+
+<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
+
+<p>Jekyll&rsquo;s plugin:</p>
+
+<pre><code>module Jekyll
+  class ImageTag &lt; Liquid::Tag
+    @url = nil
+    @caption = nil
+    @class = nil
+    @link = nil
+    // Patterns
+    IMAGE_URL_WITH_CLASS_AND_CAPTION =
+    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
+    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
+    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
+    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
+    def initialize(tag_name, markup, tokens)
+      super
+      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
+        @class   = $1
+        @url     = $3
+        @caption = $7
+        @link = $9
+      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
+        @class   = $1
+        @url     = $3
+        @caption = $7
+      elsif markup =~ IMAGE_URL_WITH_CAPTION
+        @url     = $1
+        @caption = $5
+      elsif markup =~ IMAGE_URL_WITH_CLASS
+        @class = $1
+        @url   = $3
+      elsif markup =~ IMAGE_URL
+        @url = $1
+      end
+    end
+    def render(context)
+      if @class
+        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
+      else
+        source = &quot;&lt;figure&gt;&quot;
+      end
+      if @link
+        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
+      end
+      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
+      if @link
+        source += &quot;&lt;/a&gt;&quot;
+      end
+      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
+      source += &quot;&lt;/figure&gt;&quot;
+      source
+    end
+  end
+end
+Liquid::Template.register_tag('image', Jekyll::ImageTag)
+</code></pre>
+
+<p>is written as this Hugo shortcode:</p>
+
+<pre><code>&lt;!-- image --&gt;
+&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
+    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
+        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
+    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
+    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
+    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
+        {{ .Get &quot;title&quot; }}{{ end }}
+        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
+        {{ .Get &quot;caption&quot; }}
+        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
+            {{ .Get &quot;attr&quot; }}
+        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
+        &lt;/p&gt; {{ end }}
+    &lt;/figcaption&gt;
+    {{ end }}
+&lt;/figure&gt;
+&lt;!-- image --&gt;
+</code></pre>
+
+<h3 id="usage">Usage</h3>
+
+<p>I simply changed:</p>
+
+<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
+</code></pre>
+
+<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
+
+<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
+</code></pre>
+
+<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
+
+<h2 id="finishing-touches">Finishing touches</h2>
+
+<h3 id="fix-content">Fix content</h3>
+
+<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
+
+<h3 id="clean-up">Clean up</h3>
+
+<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
+
+<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
+
+<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+
+        </section>
+        <footer class="post__meta">
+            <span class="post__meta-date"><time datetime="2014-03-10">2014. 3. 10</time></span>
+            
+<ul class="post__meta-taxonomies">
+    <li>
+        <a href="tags/" class="tag-title">Tags</a>
+        <ul class="tags">
+            
+        </ul>
+    </li>
+    <li>
+        <a href="categories/" class="category-title">Categories</a>
+        <ul class="categories">
+            
+        </ul>
+    </li>
+</ul>
+        </footer>
+    </article>
+    <section class="comment">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdisqusshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </section>
+    <nav class="p-pagination">
+        <div class="p-pagination__newer">
+            
+            <p class="p-pagenation__label">Prev</p>
+            <a href="/blog/goisforlovers/">(Hu)go Template Primer</a>
+            
+        </div>
+        <div class="p-pagination__older">
+            
+            <p class="p-pagenation__label">Next</p>
+            <a href="/blog/creating-a-new-theme/">Creating a New Theme</a>
+            
+        </div>
+    </nav>
+</div>
+
+        </main><section id="social">
+    <div class="container w-100 center fixedPadding page mt mt-6 ph3 ph5-ns ph0-l mw8">
+        <ul class="social">
+            
+            
+                <li class="social__item">
+                    <a href="https://twitter.com/BakerStJournal" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            
+            
+            
+            
+            
+
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</section><footer id="footer">
+    <div class="container w-100 center fixedPadding page mt mt-6 ph3 ph5-ns ph0-l mw8">
+        <ul class="footer-contents">
+            
+                
+                    <li class="footer-contents__item">221B, Baker Street</li>
+                
+            
+                
+                    <li class="footer-contents__item"><a href="mailto:">Mail</a></li>
+                
+            
+        </ul>
+        <p>© 2018 Sir Arthur Conan Doyle All Rights Reserved ･ Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="">Saito Boilerplate</a>.</p>
+    </div>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</body>
+</html>
