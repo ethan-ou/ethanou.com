@@ -8,20 +8,13 @@ publishDir = "docs" # if you use GitHub to deploy
 disqusShortname = "yourdisqusshortname"
 googleAnalytics = "UA-123-45"
 
-pygmentsUseClassic            = false
-pygmentsCodeFences            = true
-pygmentsCodeFencesGuessSyntax = true
+pygmentsCodeFences = true
 pygmentsStyle="monokai"
 
 [params]
     description = "Ethan Ou's personal website"
     keywords = "mystery, history, medicine"
     images = [""]
-    
-    customCSS = [
-    "overrides.css",
-    "syntax.css"
-    ]
 
 [author]
     name = "Ethan Ou"
