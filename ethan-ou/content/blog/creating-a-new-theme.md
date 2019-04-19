@@ -4,7 +4,7 @@ date: 2014-09-28
 linktitle: Creating a New Theme
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Creating a New Theme
+title: Creating a New Theme For Non-Developers in Hugo
 weight: 10
 ---
 
@@ -19,6 +19,7 @@ In this tutorial, commands that you enter will start with the "$" prompt. The ou
 
 Here's an example:
 
+<div class="filename">Bash.sh</div>
 ```bash
 ## this is a comment
 $ echo this is a command

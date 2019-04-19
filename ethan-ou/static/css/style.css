@@ -20,7 +20,6 @@ CUSTOM THEME:
 pre, .pre  {
   overflow-x: auto;
   overflow-y: hidden;
-  overflow:   scroll;
 }
 
 pre  code {
@@ -31,16 +30,31 @@ pre  code {
   line-height: 2;
 }
 
+p code {
+  background-color: #eff0f1;
+}
+
 pre {
   /* background-color: #222;
   color: #ddd; */
   white-space: pre;
-
+  border-radius: 0.3rem;
   hyphens: none;
   position: relative;
 }
 
-/* Pagination */
+.filename {
+  background: #111;
+  padding: .5rem 1rem .75rem;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 700;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-bottom: -1.5rem;
+}
+
+/* PAGINATION */
 .pagination {
   margin: 3rem 0;
 }
@@ -72,7 +86,7 @@ pre {
   margin-bottom: 1em;
 }
 
-/* Social */
+/* SOCIAL */
 .facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium {
   fill: #BABABA;
 }

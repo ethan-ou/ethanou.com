@@ -1,13 +1,14 @@
-<div class="container w-100 center page mt mt-6 ph3 ph4-ns mw8">
+<div class="container w-100 center page mt mt-6 ph3 ph4-ns mw7">
     <article class="post post--{{ .Params.class }}">
         <header>
-            <h1 class="post__title system-sans-serif lh-title near-black tc pa3">{{ .Title }}</h1>
-            <span class="post__meta-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
-            <p class="lh-copy system-sans-serif"> - {{ .ReadingTime}} minutes read</p>
-            <p class="lh-copy system-sans-serif"> - {{ .WordCount}} words</p>
+            <h1 class="post__title system-sans-serif near-black f1 tl pa3 pb0 mb3 pl0">{{ .Title }}</h1>
+                <div class="post__metadata system-sans-serif tl">
+                    <time class="post__meta-date f4" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    <p class="">{{ .ReadingTime}} minute read</p>
+                </div>
         </header>
         
-        <section class="post__content lh-copy system-sans-serif mw7 center">
+        <section class="post__content lh-copy system-sans-serif mw7 f4 center pt4 near-black">
 
             {{ .Content }}
         </section>
