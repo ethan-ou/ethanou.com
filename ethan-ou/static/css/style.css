@@ -30,6 +30,7 @@ pre  code {
   line-height: 2;
 }
 
+/* Highlights for code in body text */
 p code {
   background-color: #eff0f1;
 }
