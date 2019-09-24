@@ -1,3 +1,14 @@
+---
+author: "Ethan Ou"
+date: 2014-09-28
+linktitle: ES6
+next: /tutorials/github-pages-blog
+prev: /tutorials/automated-deployments
+title: ES6
+weight: 10
+---
+
+
 ##How these ideas get into the language
 Javascript is run by a committee.
 The committee allows for new features to be voted into the language

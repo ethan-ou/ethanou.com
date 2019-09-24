@@ -1,3 +1,13 @@
+---
+author: "Ethan Ou"
+date: 2014-09-28
+linktitle: Algorithms and Data Structures
+next: /tutorials/github-pages-blog
+prev: /tutorials/automated-deployments
+title: Algorithms and Data Structures
+weight: 10
+---
+
 #Algorithms and Data Structures for Humans
 
 Think about your everyday life.
