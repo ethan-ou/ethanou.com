@@ -8,8 +8,6 @@ title: Algorithms and Data Structures
 weight: 10
 ---
 
-#Algorithms and Data Structures for Humans
-
 Think about your everyday life.
 You wake up, make breakfast and start your day knowing you want to be *productive*. You want to get a lot of work done.
 Or maybe you're more of a wander and like taking your time to get everywhere.
@@ -23,7 +21,7 @@ These go hand in hand. The more organised a computer's inner world (or storage) 
 
 First, some terminology:
 
-##Productivity hacks for computers are called algorithms.
+## Productivity hacks for computers are called algorithms.
 The thing that determines how productive a computer is at doing *work*--including sorting your files, finding things from your hard drive or displaying the internet, are your computer's productivity hacks.
 
 In your day to day life, you know you've only got a set amount of time to do everything. So the *way* you do something matters.
@@ -36,7 +34,7 @@ In short, computers use algorithms to answer the question: how do I accomplish t
 
 
 
-##Organisational systems for computers are called Data Structures
+## Organisational systems for computers are called Data Structures
 Data structures on the other hand are the computer's organisation systems.
 Think about your to-do list, or your diary. This is how you store the notes you need for tomorrow. You might throw all these notes on a desk, or keep it in a notebook. 
 
@@ -47,7 +45,7 @@ In short, computers use data structures to answer the human question: how do I s
 
 These are just labels for these complicated but interesting ideas. Don't take the names too seriously.
 
-##Some notes before we start
+## Some notes before we start
 The hardest thing about learning how computers organise and use information (i.e. algorithms and data-structures), is it's easy to miss the forest for the trees. These ideas are so general, it's easy to miss how they relate to everyday situations. 
 
 What I want to stress however is these ideas are everywhere. 
@@ -57,7 +55,7 @@ They're rarely found in the natural world of course. The human world and the wor
 
 
 
-#Part 1: Finding a problem worth solving
+# Part 1: Finding a problem worth solving
 Computers are really good once you've figured out what to do. You can tell a computer what you want them to do, and they'll do it for you perfectly every time.
 
 The hard part about computing is finding a problem worth solving--and worth solving well.
@@ -77,13 +75,13 @@ So to start off, here's a big-picture overview of what problems Algorithms and D
 
 Context -> Human Problem -> Computing Problem -> Specific Computing Problem
 
-##The real-world context of Algorithms and Data Structures
+## The real-world context of Algorithms and Data Structures
 
 
 
-#Part 2: Algorithms
+# Part 2: Algorithms
 
-##Searching
+## Searching
 
 From Grokking Algorithms
 "Imagine you're searching for a person in a phone book. How would you do it?
