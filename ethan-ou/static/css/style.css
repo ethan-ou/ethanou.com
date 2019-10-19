@@ -5,11 +5,11 @@
 } */
 
 p {
-  color: #40404c;
-  line-height: 1.6;
-  font-size: 1.2rem;
+  color: #40404f;
+  line-height: 1.625;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.02rem;
 }
 
 h1, h2, h3, h4 {

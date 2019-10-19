@@ -1,12 +1,46 @@
 ---
 author: "Ethan Ou"
 date: 2014-09-28
-linktitle: Algorithms and Data Structures
+linktitle: A Beginner's Guide to Algorithms
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Algorithms and Data Structures
+title: A Beginner's Guide to Algorithms
 weight: 10
 ---
+
+An algorithm is a fancy term to describe the actions a computer needs to take to achieve a specific goal. Generally, any small and vital task a computer needs to do has been sped up by looking at the task through algorithms.
+
+Take your file system for instance. When you go into the files on your computer, you'll have the option of sorting the files in alphabetical order, in order of the date created and so on. There are hundreds of ways to sort these files.
+
+This isn't a big deal if your computer has ten files on it. But what if your computer has a hundred files? A thousand? What if the person using the computer doesn't know how to use folders, and dumps ten thousand files on their C:/ drive?
+
+Even though it might sound crazy, problems like this happen in computing all the time. The World Wide Web for instance, has an estimated 1.7 billion websites. If you kept all these websites in the same folder, your computer would take the rest of your life to sort through all these files.
+
+
+
+As we'll see later on, there are plenty of tricks that 
+
+
+In general however, you're not going to see this amount of scale unless you work at a large company dealing with hundreds of thousands of customers a day. So when else would algorithms be useful?
+
+
+
+Humans learn best when they are faced with real situations they need to 
+
+
+
+
+Human beings have the option of fumbling to their destination. 
+
+What's the point in learning algorithms?
+
+The vast majority of your time as a creator of software and websites will be spent on design. You'll be designing the way your application runs, the way data flows through the system, the technology you use and the 
+
+Very rarely will you need to ever *use* algorithms in your work.
+
+
+
+
 
 Think about your everyday life.
 You wake up, make breakfast and start your day knowing you want to be *productive*. You want to get a lot of work done.

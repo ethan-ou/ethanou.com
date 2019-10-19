@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Ethan Ou"
 
 canonifyurls = "true"
-paginate = 3
+paginate = 20
 publishDir = "docs" # if you use GitHub to deploy
 disqusShortname = "yourdisqusshortname"
 googleAnalytics = "UA-123-45"
@@ -39,12 +39,12 @@ pygmentsStyle="monokai"
 
 # main menu
 [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
+    name = "Articles"
+    url = "/articles/"
     weight = 1
 [[menu.main]]
-    name = "Works"
-    url = "/works-index/"
+    name = "Projects"
+    url = "/projects-index/"
     weight = 2
 [[menu.main]]
     name = "About"
@@ -52,9 +52,9 @@ pygmentsStyle="monokai"
     weight = 3
 
 # Add footer contents here
-[[params.footer]]
-    name = "221B, Baker Street"
-    url = false
-[[params.footer]]
-    name = "Mail"
-    url = "mailto:"
+# [[params.footer]]
+#     name = "Ethan Ou"
+#     url = false
+# [[params.footer]]
+#     name = "Mail"
+#     url = "mailto:"
