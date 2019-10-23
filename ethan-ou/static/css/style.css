@@ -12,9 +12,19 @@ p {
   letter-spacing: 0.02rem;
 }
 
-h1, h2, h3, h4 {
+/* h1, h2, h3, h4 {
   margin-top: 4rem !important;
   color: #20202f;
+} */
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
 }
 
 /*

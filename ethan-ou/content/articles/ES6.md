@@ -1,5 +1,4 @@
 ---
-author: "Ethan Ou"
 date: 2014-09-28
 linktitle: ES6
 next: /tutorials/github-pages-blog
@@ -9,13 +8,13 @@ weight: 10
 ---
 
 
-##How these ideas get into the language
+## How these ideas get into the language
 Javascript is run by a committee.
 The committee allows for new features to be voted into the language
 After multiple rounds of revisions, the feature gets added to the language.
 ES6 was a huge round where many new features got added, that was solely needed.
 
-##Speculation: Why ES6 was so necessary
+## Speculation: Why ES6 was so necessary
 I think one of the reasons is that Javascript went from a language to display things on websites to being a tool that developers wanted to use to build full applications.
 
 Whereas most programs in javascript were one-liners back in the early 2000s, the needs of building full applications are very different.
@@ -39,7 +38,7 @@ The for–of loop, for example, resembles similar loop statements in C++, Java
 
 
 
-##Before ES6: Declaring variables
+## Before ES6: Declaring variables
 In pre-ES6 Javascript, the usual way of declaring a variable is using ```var```.
 And the rule of ```var``` was pretty simple: "The scope of a var declared in a JS function is the whole body of that function.
 
@@ -165,7 +164,7 @@ And they were borrowed by ECMAScript's committee because they were useful in som
 
 
 
-#Notes on Var/let/const
+# Notes on Var/let/const
 
 let/const replaces IIFE (Immediately-Invoked Function Expression)
 
@@ -474,7 +473,7 @@ function twoValues() {
 
 From Mozilla Hacks:
 "When I started on Mozilla’s JavaScript team back in 2007, the joke was that the length of a typical JavaScript program was one line.
-This was two years after Google Maps launched. Not long before that, the predominant use of JavaScript had been form validation, and sure enough, your average <input onchange=>handler would be… one line of code.
+This was two years after Google Maps launched. Not long before that, the predominant use of JavaScript had been form validation, and sure enough, your average error handler would be… one line of code.
 Things have changed. JavaScript projects have grown to jaw-dropping sizes, and the community has developed tools for working at scale. One of the most basic things you need is a module system, a way to spread your work across multiple files and directories—but still make sure all your bits of code can access one another as needed—but also be able to load all that code efficiently."
 
 This import and export feature brings it more in line with languages designed to build big programs like C++ and Java.

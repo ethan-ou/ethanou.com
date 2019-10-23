@@ -1,3 +1,9 @@
+---
+title: "CSS In Depth: A Summary"
+date: 2019-10-23
+linktitle: ES6
+---
+
 CASCADE:
  When declarations conflict, the cascade considers three
 things to resolve the difference:
