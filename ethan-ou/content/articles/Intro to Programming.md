@@ -1,3 +1,9 @@
+---
+title: "Intro to Programming"
+date: 2019-10-23
+---
+
+
 If you’re going to understand how code works in a corporate environment, you need to understand what object-oriented programming is.
 
 There are many definitions. I’ll wade in and provide my own and face the consequences. Object-oriented programming is, at its essence, a filing system for code. As anyone who’s ever shared a networked folder—or organized a physical filing cabinet—knows, without a good shared filing system your office will implode. C, people said in the 1980s and ’90s, is a great language! An excellent language! But it doesn’t really let you organize things. You end up with all these functions. It’s a mess. I mean, we have this data structure for our customers (name, address, and so forth), and we have all these functions for manipulating that data (update_address, send_bill, delete_account), but the thing is, those functions aren’t related to the data except by the naming convention. C doesn’t have a consistent way to name things. Which means it’s hard to find them later. Object-oriented programming gave programmers a great way to name things—a means of building up a library. I could call (run) update_address on a picture of a dog or an Internet address. That approach is sloppy and dangerous and leads to bugs (our forebears reasoned, and not without precedent), and it makes it hard to program with big teams and keep track of everything.

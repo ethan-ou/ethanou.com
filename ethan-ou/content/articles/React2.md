@@ -1,3 +1,9 @@
+---
+title: "React 2"
+date: 2019-10-23
+---
+
+
 React Egghead.io
 Tutorial 1:
 React at its core, is just a library that lets you manipulate your webpage easier with Javascript.

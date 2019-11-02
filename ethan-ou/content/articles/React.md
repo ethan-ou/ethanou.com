@@ -1,3 +1,9 @@
+---
+title: "React"
+date: 2019-10-23
+---
+
+
 If you're jumping into React for the first time, the toughest part about understanding React isn't the framework itself and what it does. It's the paradigm shift you need to learn in order to understand what's happening. 
 
 React hints you into programming a different way. You don't have a direct connection to the DOM you're programming into. And the way you program means you can't rely on the satisfaction of seeing results instantly on your screen.
