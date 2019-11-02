@@ -44,7 +44,7 @@ pygmentsStyle="monokai"
     weight = 1
 [[menu.main]]
     name = "Projects"
-    url = "/projects-index/"
+    url = "/projects/"
     weight = 2
 [[menu.main]]
     name = "About"
