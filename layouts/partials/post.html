@@ -1,0 +1,36 @@
+<div class="container w-100 center page mt mt-6 ph3 ph4-ns mw7">
+    <article class="post post--{{ .Params.class }}">
+        <header>
+            <h1 class="post__title system-sans-serif tc near-black f1 pa3 pb0 mb3">{{ .Title }}</h1>
+                <div class="post__metadata system-sans-serif tc">
+                    <p class="f4 gray"><time class="post__meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    · {{ .ReadingTime}} minute read</p>
+                </div>
+        </header>
+        
+        <section class="post__content lh-copy system-sans-serif mw7 f4 center pt4 near-black">
+
+            {{ .Content }}
+        </section>
+        <footer class="post__meta">
+            
+            {{ partial "taxonomies" . }}
+        </footer>
+    </article>
+    <nav class="p-pagination">
+        <div class="p-pagination__newer">
+            {{ if .PrevInSection }}
+            <p class="p-pagenation__label">Prev</p>
+            <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+            {{ else }}
+            {{ end }}
+        </div>
+        <div class="p-pagination__older">
+            {{ if .NextInSection }}
+            <p class="p-pagenation__label">Next</p>
+            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
+            {{ else }}
+            {{ end }}
+        </div>
+    </nav>
+</div>

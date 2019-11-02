@@ -1,0 +1,12 @@
+<div class="container w-100 center page mt mt-6 ph3 ph4-ns mw7 system-sans-serif">
+    <h1 class="title lh-title">{{ .Title }}</h1>
+        {{ range .Paginator.Pages }}
+        <div class="link dim black b bb">
+            <a class="link" href="{{ .URL }}"> 
+                <h2 class="mt-2 f4">{{ .Title }}</h2>
+                <p class="lh-solid f5">{{ .Date.Format "January 1, 2006" }}</p>
+            </a>
+        </div>
+        {{ end }}
+        {{ partial "pagination.html" . }}
+</div>
