@@ -11,7 +11,7 @@ images = ""
 
 #### Part 1: Being a Reprint from the Reminiscences of John Watson, M.D., Late of the Army Medical Department
 
-1. [Mr. Sherlock Holmes](/projects/mr-sherlock-holmes/)
+1. Mr. Sherlock Holmes
 2. The Science of Deduction
 3. The Lauriston Garden Mystery
 4. What John Rance Had to Tell
