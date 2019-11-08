@@ -32,3 +32,4 @@ Being an airline pilot requires you to stay in other countries, where conditions
 
 By fulfilling *some part* of your dream, you keep yourself focused on the upside of your dream, without needing to encounter many of the downsides that come with turning that dream into a big thing.
 
+## Get the practical reality right
