@@ -1,14 +1,15 @@
 <footer id="footer">
-    <div class="container w-100 center page mt mt-6 ph3 ph4-ns mw7 bottom-0 system-sans-serif pt4">
-        <ul class="footer-contents">
+    <div class="container page bottom-0 pt4 pb4">
+        <hr class="footer-divider">
+        <div class="footer-contents navigation__left">
             {{ range .Site.Params.footer }}
                 {{ if ne .url false }}
-                    <li class="footer-contents__item"><a href="{{ .url }}">{{ .name }}</a></li>
+                    <a href="{{ .url }}" class="footer-contents__item navigation__item">{{ .name }}</a></li>
                 {{ else }}
-                    <li class="footer-contents__item">{{ .name }}</li>
+                    <p class="footer-contents__item navigation__item">{{ .name }}</p>
                 {{ end }}
             {{ end }}
-        </ul>
-        <p>© {{ .Site.LastChange.Format "2006" }} {{ .Site.Author.name }} All Rights Reserved ･ Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="">Saito Boilerplate</a>.</p>
+        </div>
+        <!-- <p>© {{ .Site.LastChange.Format "2006" }} {{ .Site.Author.name }} All Rights Reserved ･ Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="">Saito Boilerplate</a>.</p> -->
     </div>
 </footer>

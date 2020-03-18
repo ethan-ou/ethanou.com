@@ -13,7 +13,6 @@ pygmentsStyle="monokai"
 
 [params]
     description = "Ethan Ou's personal website"
-    keywords = "mystery, history, medicine"
     images = [""]
 
 [author]
@@ -47,6 +46,20 @@ pygmentsStyle="monokai"
     url = "/projects/"
     weight = 2
 [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+
+[[params.footer]]
+    name = "Articles"
+    url = "/articles/"
+    weight = 1
+[[params.footer]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+[[params.footer]]
     name = "About"
     url = "/about/"
     weight = 3
