@@ -8,4 +8,18 @@
             <br>
         </article>
     {{ end }}
+    <section class="list page">
+        <h2>Latest Articles:</h2>
+        {{ range first 5 (where $.Site.Pages.ByDate.Reverse "Section" "articles") }}
+            <div class="list__item link b pb1 pb0-l">
+                <a class="link items-baseline flex-l underline-hover" href="{{ .URL }}"> 
+                    <h2 class="f4 dark-gray w-80-l pr2-l mb2">{{ .Title }}</h2>
+                    <p class="lh-solid f6 gray mt0 tr-l">{{ .Date.Format "January 1, 2006" }}</p>
+                </a>
+            </div>
+        {{ end }}
+        <a class="p-pagination__container p-pagination__older link page" href="/articles">
+            <p class="p-pagination__label">More 🠖</p>
+        </a>
+    </section>
 </div>
