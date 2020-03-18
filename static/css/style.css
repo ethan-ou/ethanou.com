@@ -113,14 +113,12 @@ li {
 
 .home__content {
   font-size: 1.25rem;
-  letter-spacing: -0.02rem;
 }
 
 .post__content {
   -webkit-font-smoothing: antialiased;
   color: var(--content-color);
   font-size: 1.25rem;
-  letter-spacing: -0.02rem;
 }
 
 .post__content p {
