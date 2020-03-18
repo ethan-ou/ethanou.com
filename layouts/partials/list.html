@@ -1,10 +1,10 @@
 <div class="container page list">
     <h1 class="title lh-title">{{ .Title }}</h1>
         {{ range .Paginator.Pages }}
-        <div class="list__item link black b pt1">
-            <a class="list__item link flex-l items-baseline hover-bg-light-gray active-bg-light-gray na2 br3 pv1" href="{{ .URL }}"> 
-                <h2 class="f4 dark-gray w-80-l pr2-l ml2">{{ .Title }}</h2>
-                <p class="lh-solid f6 gray mt0 tr">{{ .Date.Format "January 1, 2006" }}</p>
+        <div class="list__item link b pb1 pb0-l">
+            <a class="link items-baseline flex-l underline-hover" href="{{ .URL }}"> 
+                <h2 class="f4 dark-gray w-80-l pr2-l mb2">{{ .Title }}</h2>
+                <p class="lh-solid f6 gray mt0 tr-l">{{ .Date.Format "January 1, 2006" }}</p>
             </a>
         </div>
         {{ end }}
