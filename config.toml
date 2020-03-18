@@ -13,7 +13,6 @@ pygmentsStyle="monokai"
 
 [params]
     description = "Ethan Ou's personal website"
-    keywords = "mystery, history, medicine"
     images = [""]
 
 [author]
