@@ -19,7 +19,6 @@ In this tutorial, commands that you enter will start with the "$" prompt. The ou
 
 Here's an example:
 
-<div class="filename">Bash.sh</div>
 ```bash
 ## this is a comment
 $ echo this is a command

@@ -1,7 +1,7 @@
 /* PAGINATION */
-.pagination {
-margin: 3rem 0;
-}
+/* .pagination {
+    margin: 3rem 0;
+} */
 
 .pagination li {
 display: inline-block;
@@ -12,7 +12,6 @@ margin-bottom: 2.5em;
 .pagination li a {
 padding: .5rem .625rem;
 background-color: white;
-color: #333;
 border: 1px solid #ddd;
 border-radius: 3px;
 text-decoration: none;
@@ -26,13 +25,12 @@ max-width: 50%;
 }
 
 .p-pagination__label {
-color: var(--content-color);
 text-decoration: none;
 font-weight: bold;
 }
 
 @media screen and (min-width: 30em) {
-.p-pagination__container {
-    width: 20rem;
-}
+    .p-pagination__container {
+        width: 20rem;
+    }
 }

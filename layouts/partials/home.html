@@ -2,7 +2,7 @@
     {{ range where $.Site.Pages "Section" "home" }}
         <article class="home home--{{ .Params.class }}  page">
             <h1 class="home__title title">{{ .Title }}</h1>
-            <section class="home__content content measure f4">
+            <section class="home__content content measure f4-l">
                 {{ .Content }}
             </section>
             <br>
@@ -12,14 +12,15 @@
         <h2>Latest Articles:</h2>
         {{ range first 5 (where $.Site.Pages.ByDate.Reverse "Section" "articles") }}
             <div class="list__item link pb1 pb0-l">
-                <a class="link items-baseline flex-l" href="{{ .URL }}"> 
-                    <h2 class="f4 w-80-l pr2-l mb2 underline-hover">{{ .Title }}</h2>
-                    <p class="lh-solid f6 gray mt0 tr-l">{{ .Date.Format "January 1, 2006" }}</p>
+                <a class="link items-baseline flex-l justify-between" href="{{ .URL }}"> 
+                    <h2 class="f4 pr2-l mb2 black underline-hover font-600">{{ .Title }}</h2>
+                    <p class="lh-solid f6 gray mt0 tr-l font-500">{{ .Date.Format "January 1, 2006" }}</p>
                 </a>
             </div>
         {{ end }}
-        <a class="p-pagination__container p-pagination__older link page black" href="/articles">
-            <p class="p-pagination__label tr underline-hover">More 🠖</p>
+        <br>
+        <a class="link black b fr-l underline-hover" href="/articles">
+            More &rarr;
         </a>
     </section>
 </div>

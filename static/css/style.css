@@ -107,11 +107,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: var(--family-primary);
-  font-size: 1.25rem;
+  
+}
+
+@media screen and (min-width: 30em) {
+  body {
+    font-size: 1.2rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-title);
 }
 
 p {
@@ -126,6 +131,10 @@ a {
   
 }
 
+:focus:not([tabindex='-1']) {
+  outline: 4px solid #80b3ff;
+  outline-offset: 2px;
+}
 
 a:link {
   text-decoration-color: rgb(0, 112, 243);
@@ -149,18 +158,17 @@ a:active {
 
 code {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 14px;
   background-color: #eeeeee;
 }
 
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
   line-height: 1.4;
   word-break: break-all;
   word-wrap: break-word;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 pre,
@@ -168,6 +176,31 @@ code {
   font-family: monocode, monospace;
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-radius: 6px;
+}
+
+code[class*=language-], pre[class*=language-], pre code {
+  padding: 1rem;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 30em) {
+  code[class*=language-], pre[class*=language-], pre code {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
 }
 
 /* LAYOUT */
@@ -231,8 +264,8 @@ code {
 }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  margin-top: 3.5rem;
   line-height: 1.25;
+  margin-top: 2rem;
 }
 
 .post__title {
@@ -240,7 +273,7 @@ code {
 }
 
 .post p {
-  line-height: 2;
+  line-height: 1.75;
 }
 
 /* .content {
@@ -261,13 +294,13 @@ code {
   margin-bottom: 1.5rem;
 }
 
-.footer-divider {
+.divider {
   max-width: var(--max-width);
   border: 0;
   border-top: 1px solid #e5e5e5;
   border-bottom: 0 solid transparent;
   box-sizing: content-box;
-  margin: 2em auto;
+  margin: auto;
   overflow: visible;
   margin-bottom: 1.5625em;
 }
@@ -275,6 +308,10 @@ code {
 @media screen and (min-width: 30em) {
   .title {
     font-size: 3rem;
+  }
+
+  .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+    margin-top: 3.5rem;
   }
 
   .page {

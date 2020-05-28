@@ -1,9 +1,9 @@
 <div class="container">
     <article class="post post--{{ .Params.class }} page">
         <header>
-            <h1 class="post__title title f1 lh-title mb3">{{ .Title }}</h1>
+            <h1 class="post__title title lh-title mb3">{{ .Title }}</h1>
             <div class="post__metadata">
-                <p class="f5 gray mt0"><time class="post__meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <p class="f5 gray mt0 font-500"><time class="post__meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                 · {{ .ReadingTime}} minute read</p>
                 </div>
         </header>
@@ -20,7 +20,7 @@
         {{ if .PrevInSection }}
             <a href="{{ .PrevInSection.Permalink }}" class="link">
                 <div class="p-pagination__container p-pagination__newer link fl">
-                    <p class="p-pagination__label black underline-hover">← Prev</p>
+                    <p class="p-pagination__label black underline-hover">&larr; Prev</p>
                     <p class="black underline-hover">{{ .PrevInSection.Title }}</p>
                 </div>
             </a>
@@ -29,7 +29,7 @@
             {{ if .NextInSection }}
             <a href="{{ .NextInSection.Permalink }}">
                 <div class="p-pagination__container p-pagination__older fr tr">
-                    <p class="p-pagination__label black">Next →</p>
+                    <p class="p-pagination__label black">Next &rarr;</p>
                     <p class="black underline-hover">{{ .NextInSection.Title }}</p>
                 </div>
             </a>
