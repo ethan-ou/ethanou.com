@@ -2,7 +2,7 @@
     {{ range where $.Site.Pages "Section" "home" }}
         <article class="home home--{{ .Params.class }}  page">
             <h2 class="home__title title">{{ .Title }}</h2>
-            <section class="home__content content dark-gray measure">
+            <section class="home__content content dark-gray measure f4">
                 {{ .Content }}
             </section>
             <br>

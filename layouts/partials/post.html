@@ -1,15 +1,14 @@
 <div class="container">
     <article class="post post--{{ .Params.class }} page">
         <header>
-            <h1 class="post__title title">{{ .Title }}</h1>
+            <h1 class="post__title title f1 lh-title">{{ .Title }}</h1>
             <div class="post__metadata">
                 <p class="f4 gray"><time class="post__meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                 · {{ .ReadingTime}} minute read</p>
                 </div>
         </header>
         
-        <section class="post__content content pt2">
-
+        <section class="post__content content pt2 f4">
             {{ .Content }}
         </section>
         {{/*  <footer class="post__meta">
@@ -21,7 +20,7 @@
         {{ if .PrevInSection }}
             <a href="{{ .PrevInSection.Permalink }}">
                 <div class="p-pagination__container p-pagination__newer">
-                    <p class="p-pagination__label">🠔 Prev</p>
+                    <p class="p-pagination__label">← Prev</p>
                     {{ .PrevInSection.Title }}
                 </div>
             </a>
@@ -30,7 +29,7 @@
             {{ if .NextInSection }}
             <a href="{{ .NextInSection.Permalink }}">
                 <div class="p-pagination__container p-pagination__older">
-                    <p class="p-pagination__label">Next 🠖</p>
+                    <p class="p-pagination__label">Next →</p>
                     {{ .NextInSection.Title }}
                 </div>
             </a>
