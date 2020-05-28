@@ -112,7 +112,7 @@ body {
 
 @media screen and (min-width: 30em) {
   body {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -307,7 +307,7 @@ code[class*=language-], pre[class*=language-], pre code {
 
 @media screen and (min-width: 30em) {
   .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {

@@ -4,9 +4,9 @@
         <div class="footer-contents navigation__left">
             {{ range .Site.Params.footer }}
                 {{ if ne .url false }}
-                    <a href="{{ .url }}" class="footer-contents__item navigation__item">{{ .name }}</a></li>
+                    <a href="{{ .url }}" class="footer-contents__item navigation__item f5">{{ .name }}</a></li>
                 {{ else }}
-                    <p class="footer-contents__item navigation__item">{{ .name }}</p>
+                    <p class="footer-contents__item navigation__item f5">{{ .name }}</p>
                 {{ end }}
             {{ end }}
         </div>
