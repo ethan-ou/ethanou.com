@@ -158,7 +158,7 @@ Because they were mathematical constructs, they trickled down into functional pr
 And they were borrowed by ECMAScript's committee because they were useful in some way.
 
 
-
+```New thing```
 
 
 
