@@ -99,7 +99,7 @@
 
 :root {
   --max-width: 48rem;
-  --line-height: 1.618;
+  --line-height: 1.6;
 }
 
 body {
@@ -115,12 +115,35 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: var(--line-height);
-  color: var(--color-content);
 }
 
 li {
   line-height: var(--line-height);
-  color: var(--color-content);
+}
+
+a {
+  
+}
+
+
+a:link {
+  text-decoration-color: rgb(0, 112, 243);
+}
+
+a:visited {
+
+}
+
+a:focus {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
 }
 
 code {
@@ -215,6 +238,10 @@ code {
   margin-top: 2rem;
 }
 
+.post p {
+  line-height: 2rem;
+}
+
 /* .content {
   line-height: 1.625;
   font-size: 1.25rem;
@@ -229,7 +256,7 @@ code {
 }
 
 .post__content p {
-  margin: 1.618rem 0;
+  margin: 1rem 0;
 }
 
 .footer-divider {
