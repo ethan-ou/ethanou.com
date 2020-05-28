@@ -158,7 +158,6 @@ a:active {
 
 code {
   padding: 2px 4px;
-  font-size: 14px;
   background-color: #eeeeee;
 }
 
@@ -169,29 +168,32 @@ pre {
   word-wrap: break-word;
   border: 1px solid #ccc;
   font-size: 1rem;
+  padding: 1rem;
 }
 
 pre,
 code {
   font-family: monocode, monospace;
-  -webkit-font-smoothings: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   border-radius: 6px;
 }
 
 code[class*=language-], pre[class*=language-], pre code {
-  padding: 1rem;
+  padding: 0;
   font-size: 0.9rem;
   white-space: pre-wrap;
   word-spacing: normal;
   word-break: normal;
   line-height: 1.7;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 30em) {
   code[class*=language-], pre[class*=language-], pre code {
-    padding: 1.5rem;
     font-size: 1rem;
+  }
+  
+  pre {
+    padding: 1.5rem;
   }
 }
 

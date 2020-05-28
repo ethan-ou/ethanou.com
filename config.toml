@@ -17,7 +17,8 @@ googleAnalytics = "UA-123-45"
     [markup.goldmark.renderer]
       unsafe = true  # Enable user to embed HTML snippets in Markdown content.
   [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
+    codeFences = true
+    style = "github"
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
