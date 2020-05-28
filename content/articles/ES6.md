@@ -148,7 +148,7 @@ We'll see more about the details later.
 
 **Where did const and let come from**
 
-```let``` came from mathematics
+a ```let``` came from mathematics
 let x = 5
 
 so did ```const```.
