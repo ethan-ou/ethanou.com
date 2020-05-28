@@ -50,7 +50,6 @@ As Jason Orendorff says:
 In code it looks like this:
 
 ```javascript
-
 function varDoesntCare() {
   var data = ["apple", "peach", "pear"];
   var newArray = [];
@@ -177,7 +176,6 @@ let and const don't need IIFE's to avoid leaking.
 {
   const name = "ethan";
 }
-
 ```
 
 
