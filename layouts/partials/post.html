@@ -19,18 +19,18 @@
     <nav class="p-pagination page">
         {{ if .PrevInSection }}
             <a href="{{ .PrevInSection.Permalink }}" class="link">
-                <div class="p-pagination__container p-pagination__newer link">
+                <div class="p-pagination__container p-pagination__newer link fl">
                     <p class="p-pagination__label black underline-hover">← Prev</p>
-                    <p>{{ .PrevInSection.Title }}</p>
+                    <p class="black underline-hover">{{ .PrevInSection.Title }}</p>
                 </div>
             </a>
             {{ else }}
             {{ end }}
             {{ if .NextInSection }}
             <a href="{{ .NextInSection.Permalink }}">
-                <div class="p-pagination__container p-pagination__older">
+                <div class="p-pagination__container p-pagination__older fr tr">
                     <p class="p-pagination__label black">Next →</p>
-                    <p>{{ .NextInSection.Title }}</p>
+                    <p class="black underline-hover">{{ .NextInSection.Title }}</p>
                 </div>
             </a>
             {{ else }}

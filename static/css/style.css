@@ -107,6 +107,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: var(--family-primary);
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -239,7 +240,7 @@ code {
 }
 
 .post p {
-  line-height: 2rem;
+  line-height: 2;
 }
 
 /* .content {
@@ -255,8 +256,9 @@ code {
 .post__content {
 }
 
-.post__content p {
-  margin: 1rem 0;
+.post__content {
+ 
+  margin-bottom: 1.5rem;
 }
 
 .footer-divider {
