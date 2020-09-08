@@ -1,10 +1,13 @@
 <footer>
     <hr>
-        <nav>
+    <p>From Sydney, Australia</p>
+    <nav>
         <ul>
             {{ range .Site.Params.footer }}
                 {{ if ne .url false }}
-            <li><a href="{{ .url }}">{{ .name }}</a></li>
+            <li>
+                <a href="{{ .url }}">{{ .name }}</a>
+            </li>
                 {{ else }}
                     <p>{{ .name }}</p>
                 {{ end }}

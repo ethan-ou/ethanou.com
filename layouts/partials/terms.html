@@ -1,8 +1,8 @@
-<div class="container page">
-    <h1 class="title">{{ .Title }}</h1>
-    <ul class="terms">
+<div>
+    <h1>{{ .Title }}</h1>
+    <ul>
         {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
-        <li class="terms__item">
+        <li>
             <a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} </li>
         {{ end }}
     </ul>

@@ -1,12 +1,11 @@
 <div>
-    <h1>{{ .Title }}</h1>
+    <h2>{{ .Title }}</h2>
         {{ range .Paginator.Pages }}
-        <div>
+        <h4>
             <a href="{{ .URL }}"> 
-                <h2>{{ .Title }}</h2>
-                <p>{{ .Date.Format "January 1, 2006" }}</p>
+            {{ .Title }}
             </a>
-        </div>
+        </h4>
         {{ end }}
         {{ partial "pagination.html" . }}
 </div>

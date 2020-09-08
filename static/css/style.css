@@ -1,3 +1,11 @@
+html {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "PT Sans", "Open Sans", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.618;
+}
+
+/* Remove default underline for links */
 a {
   text-decoration: none;
 }
@@ -6,10 +14,39 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Heading Nav Text Color */
+header nav a,
+header nav a:visited {
+  color: black;
+}
+
+/* Nav Centering*/
+nav li:last-child {
+  margin-right: 0;
+}
+
+/* Footer font size */
+body > footer {
+  font-size: 0.9rem;
+}
+
+/* Increase size of article timestamp */
+article header p {
+  font-size: 1rem;
+}
+
+/* Code Block Styling */
 code {
   padding: 2px 4px;
   font-size: 14px;
   background-color: #eeeeee;
+}
+
+/* Disable for aswm.css */
+pre > code {
+  box-sizing: border-box;
+  border-right: none;
+  border-left: none;
 }
 
 pre {
@@ -23,13 +60,16 @@ pre {
 
 pre,
 code {
-  font-family: monocode, monospace;
+  font-family: "Roboto Mono", Consolas, Menlo, Monaco, source-code-pro,
+    Courier New, monospace;
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border-radius: 6px;
 }
 
-code[class*=language-], pre[class*=language-], pre code {
+code[class*="language-"],
+pre[class*="language-"],
+pre code {
   padding: 1rem;
   font-size: 0.9rem;
   white-space: pre-wrap;
@@ -39,8 +79,87 @@ code[class*=language-], pre[class*=language-], pre code {
 }
 
 @media screen and (min-width: 30em) {
-  code[class*=language-], pre[class*=language-], pre code {
+  code[class*="language-"],
+  pre[class*="language-"],
+  pre code {
     padding: 1.5rem;
     font-size: 1rem;
   }
+}
+
+/* Change Theme Colors for Dark Theme */
+@media (prefers-color-scheme: dark) {
+  html {
+    background: hsl(213, 17%, 10%);
+    color: hsl(194, 15%, 79%);
+  }
+
+  /* Heading Nav Text Color */
+  header nav a,
+  header nav a:visited {
+    color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: hsl(194, 15%, 90%);
+  }
+
+  /* Code Section */
+  code {
+    background-color: rgb(62, 76, 80);
+  }
+
+  pre {
+    border: 2px solid hsl(213, 14%, 18%);
+  }
+
+  .hljs {
+    background: hsl(213, 14%, 6%);
+  }
+
+  article header p {
+    color: hsl(194, 15%, 49%);
+  }
+
+  hr {
+    background: hsl(194, 15%, 49%);
+  }
+
+  body > footer {
+    color: hsl(194, 15%, 49%);
+  }
+
+  a,
+  nav a:visited {
+    color: hsl(350, 46%, 69%);
+  }
+
+  a:hover {
+    color: hsl(350, 46%, 83%);
+  }
+
+  article header h1 a:visited:hover,
+  article header h2 a:visited:hover,
+  nav a:hover {
+    color: hsl(350, 46%, 83%);
+  }
+
+  @media (min-width: 65rem) {
+    aside {
+      border-left: 1px solid hsl(194, 15%, 49%);
+    }
+  }
+  
+  button {
+    background: hsl(194, 15%, 49%);
+  }
+
+  blockquote {
+    border-left: 0.3rem solid hsl(194, 15%, 79%);
+  }
+  
 }

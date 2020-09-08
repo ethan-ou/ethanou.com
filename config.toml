@@ -52,10 +52,10 @@ googleAnalytics = "UA-123-45"
     name = "Articles"
     url = "/articles/"
     weight = 1
-[[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 2
+# [[menu.main]]
+#     name = "Projects"
+#     url = "/projects/"
+#     weight = 2
 [[menu.main]]
     name = "About"
     url = "/about/"
@@ -66,10 +66,10 @@ googleAnalytics = "UA-123-45"
     name = "Articles"
     url = "/articles/"
     weight = 1
-[[params.footer]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 2
+# [[params.footer]]
+#     name = "Projects"
+#     url = "/projects/"
+#     weight = 2
 [[params.footer]]
     name = "About"
     url = "/about/"
