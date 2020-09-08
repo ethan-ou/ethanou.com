@@ -1,15 +1,15 @@
 <footer>
-    <div>
-        <hr>
-        <div>
+    <hr>
+        <nav>
+        <ul>
             {{ range .Site.Params.footer }}
                 {{ if ne .url false }}
-                    <a href="{{ .url }}">{{ .name }}</a></li>
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
                 {{ else }}
                     <p>{{ .name }}</p>
                 {{ end }}
             {{ end }}
-        </div>
+        </ul>
         <!-- <p>© {{ .Site.LastChange.Format "2006" }} {{ .Site.Author.name }} All Rights Reserved ･ Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="">Saito Boilerplate</a>.</p> -->
-    </div>
+    </nav>
 </footer>
