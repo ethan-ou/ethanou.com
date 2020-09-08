@@ -30,6 +30,11 @@ body > footer {
   font-size: 0.9rem;
 }
 
+/* Blockquote Border */
+blockquote {
+  border-left: 0.3rem solid #aaa;
+}
+
 /* Increase size of article timestamp */
 article header p {
   font-size: 1rem;
