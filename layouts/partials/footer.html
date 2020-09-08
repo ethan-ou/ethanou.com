@@ -1,12 +1,12 @@
-<footer id="footer">
-    <div class="container page bottom-0 pt4 pb4">
-        <hr class="divider">
-        <div class="footer-contents navigation__left">
+<footer>
+    <div>
+        <hr>
+        <div>
             {{ range .Site.Params.footer }}
                 {{ if ne .url false }}
-                    <a href="{{ .url }}" class="footer-contents__item navigation__item f5">{{ .name }}</a></li>
+                    <a href="{{ .url }}">{{ .name }}</a></li>
                 {{ else }}
-                    <p class="footer-contents__item navigation__item f5">{{ .name }}</p>
+                    <p>{{ .name }}</p>
                 {{ end }}
             {{ end }}
         </div>

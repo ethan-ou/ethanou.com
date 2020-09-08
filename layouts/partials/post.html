@@ -1,36 +1,36 @@
-<div class="container">
-    <article class="post post--{{ .Params.class }} page">
+<div>
+    <article>
         <header>
-            <h1 class="post__title title lh-title mb3">{{ .Title }}</h1>
-            <div class="post__metadata">
-                <p class="f5 gray mt0 font-500"><time class="post__meta-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <h1>{{ .Title }}</h1>
+            <div>
+                <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                 · {{ .ReadingTime}} minute read</p>
                 </div>
         </header>
         
-        <section class="post__content content pt2">
+        <section>
             {{ .Content }}
         </section>
-        {{/*  <footer class="post__meta">
+        {{/*  <footer>
             
             {{ partial "taxonomies" . }}
         </footer>  */}}
     </article>
-    <nav class="p-pagination page">
+    <nav>
         {{ if .PrevInSection }}
-            <a href="{{ .PrevInSection.Permalink }}" class="link">
-                <div class="p-pagination__container p-pagination__newer link fl">
-                    <p class="p-pagination__label black underline-hover">&larr; Prev</p>
-                    <p class="black underline-hover">{{ .PrevInSection.Title }}</p>
+            <a href="{{ .PrevInSection.Permalink }}">
+                <div>
+                    <p>&larr; Prev</p>
+                    <p>{{ .PrevInSection.Title }}</p>
                 </div>
             </a>
             {{ else }}
             {{ end }}
             {{ if .NextInSection }}
             <a href="{{ .NextInSection.Permalink }}">
-                <div class="p-pagination__container p-pagination__older fr tr">
-                    <p class="p-pagination__label black">Next &rarr;</p>
-                    <p class="black underline-hover">{{ .NextInSection.Title }}</p>
+                <div>
+                    <p>Next &rarr;</p>
+                    <p>{{ .NextInSection.Title }}</p>
                 </div>
             </a>
             {{ else }}
