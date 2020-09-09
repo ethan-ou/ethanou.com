@@ -1,11 +1,14 @@
-<header id="header" class="container pa3 pa4-ns">
-    <div class="container db dt-ns">
-        <div class="navigation navigation--left">
-            <a href="{{ .Site.BaseURL }}" class="link dib b f4 dim black">{{ .Site.Title }}</a>
-        </div>
-        <nav class="navigation navigation--right">
-                {{ range .Site.Menus.main }}<a href="{{ .URL }}" class="navigation__item f5">{{ .Name }}</a></li>
-                {{ end }}
-        </nav>
-    </div>
+<header>
+    <nav style="display: flex; justify-content: space-between; flex-wrap: wrap">
+        <h1 style="margin-right: 2rem">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </h1>
+        <ul>
+        {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+        {{ end }}
+        </ul>
+    </nav>
 </header>
