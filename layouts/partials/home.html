@@ -12,7 +12,7 @@
                 <a href="/articles">See all &rarr;</a>
             </small>
         </h3>
-        {{ range first 5 (where $.Site.Pages.ByDate.Reverse "Section" "articles") }}
+        {{ range first 5 (where site.RegularPages.ByDate.Reverse "Section" "articles") }}
         <h4>
             <a href="{{ .URL }}"> 
                 {{ .Title }}
