@@ -1,10 +1,13 @@
 <div>
     <article>
+        {{ $featured_image := .Param "featured_image"}}
+        {{ if not ($featured_image) }}
         <header>
             <h1>{{ .Title }}</h1>
             <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                 · {{ .ReadingTime}} minute read</p>
         </header>
+        {{ end }}
         {{ .Content }}
         {{/*  <footer>
             

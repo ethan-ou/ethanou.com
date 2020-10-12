@@ -5,6 +5,10 @@ html {
   line-height: 1.618;
 }
 
+@supports (font-variation-settings: normal) {
+  h1, h2, h3, h4, h5, h6 { font-family: 'Inter var', sans-serif; }
+}
+
 /* Remove default underline for links */
 a {
   text-decoration: none;
@@ -29,9 +33,14 @@ nav li:last-child {
   margin-right: 0;
 }
 
+hr {
+  color: #767676
+}
+
 /* Footer font size */
 body > footer {
   font-size: 0.9rem;
+  color: #767676
 }
 
 /* Blockquote Border */
@@ -42,6 +51,7 @@ blockquote {
 /* Increase size of article timestamp */
 article header p {
   font-size: 1rem;
+  color: #767676
 }
 
 /* Code Block Styling */
