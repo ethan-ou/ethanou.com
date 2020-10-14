@@ -6,7 +6,7 @@ featured_image: "https://source.unsplash.com/ccTuLk6nNO8"
 
 Recently, I stumbled into a way to gain some perspective if you're feeling lost, or want to reconnect with your core self.
 
-It requires nothing fancy. You won't need to buy anything or travel someplace far away. It's quite straight-forward:
+It requires nothing fancy. You won't need to buy anything or travel someplace far away. Instead:
 
 ***
 
