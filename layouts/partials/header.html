@@ -1,8 +1,13 @@
 {{ $featured_image := .Param "featured_image"}}
-{{ if $featured_image }}
-{{ $featured_image := (trim $featured_image "/") | absURL }}
-<header style="margin-bottom: 2.5rem; max-width: 100%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url('{{ $featured_image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-    <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto; padding: 1em 1.2em; max-width: 40rem;">
+<header 
+    {{ if $featured_image }} 
+    {{ $featured_image := (trim $featured_image "/") | absURL }} 
+        style="margin-bottom: 2.5rem; max-width: 100%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url('{{ $featured_image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;" 
+    {{else}}
+        style="max-width: 100%;"
+    {{end}}
+>
+    <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 0 auto; padding: 1em 1.2em; max-width: 40rem;">
         <h1 style="margin-right: 2rem">
             <a href="{{ .Site.BaseURL }}" style="color: white">{{ .Site.Title }}</a>
         </h1>
@@ -14,25 +19,11 @@
             {{ end }}
         </ul>
     </nav>
+    {{ if $featured_image }}
     <section style="max-width: 40rem; margin: 0 auto; height: 100%; padding: 3.5rem 1.2rem;">
         <h1 class="featured__title" style="line-height: 1.12; color: white">{{ .Title }}</h1>
         <p style="color: hsl(194, 15%, 89%); padding-top: 0.5rem"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
             · {{ .ReadingTime}} minute read</p>
     </section>
+    {{end}}
 </header>
-{{ else }}
-<header>
-    <nav style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-        <h1 style="margin-right: 2rem">
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-        </h1>
-        <ul>
-        {{ range .Site.Menus.main }}
-            <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
-            </li>
-        {{ end }}
-        </ul>
-    </nav>
-</header>
-{{ end }}
