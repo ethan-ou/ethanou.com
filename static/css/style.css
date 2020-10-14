@@ -37,8 +37,9 @@ hr {
   color: #767676
 }
 
-/* Footer font size */
+/* Footer font size & margin */
 body > footer {
+  margin-top: 4em;
   font-size: 0.9rem;
   color: #767676
 }
@@ -181,4 +182,15 @@ pre code {
     border-left: 0.3rem solid hsl(194, 15%, 79%);
   }
   
+}
+
+/* Classes */
+.featured__title {
+  font-size: 2.25rem
+}
+
+@media (min-width: 30em) {
+  .featured__title {
+    font-size: 3.5rem
+  }
 }
