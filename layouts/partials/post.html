@@ -14,6 +14,7 @@
             {{ partial "taxonomies" . }}
         </footer>  */}}
     </article>
+    {{ if or .PrevInSection .NextInSection }}
     <br>
     <nav style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-gap: 1em 1em;">
         {{ if .PrevInSection }}
@@ -36,4 +37,5 @@
             {{ else }}
             {{ end }}
     </nav>
+    {{ end }}
 </div>
