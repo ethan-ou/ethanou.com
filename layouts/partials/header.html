@@ -9,12 +9,20 @@
 >
     <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 0 auto; padding: 1em 1.2em; max-width: 40rem;">
         <h1 style="margin-right: 2rem">
-            <a href="{{ .Site.BaseURL }}" style="color: white">{{ .Site.Title }}</a>
+            <a href="{{ .Site.BaseURL }}" 
+            {{ if $featured_image }}    
+                style="color: white"
+            {{end}}
+            >{{ .Site.Title }}</a>
         </h1>
         <ul>
             {{ range .Site.Menus.main }}
             <li>
-                <a href="{{ .URL }}" style="color: white">{{ .Name }}</a>
+                <a href="{{ .URL }}" 
+                {{ if $featured_image }}
+                    style="color: white"
+                {{end}}
+                >{{ .Name }}</a>
             </li>
             {{ end }}
         </ul>
