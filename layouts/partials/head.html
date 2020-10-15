@@ -5,8 +5,8 @@
 {{ with .Site.Params.description }}<meta name="description" content="{{ block "description" . }}{{ . }}{{ end }}">{{ end }}
 {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/opengraph.html" . }}
+{{ template "_default/twitter_cards.html" . }}
+{{ template "_default/opengraph.html" . }}
 
 <base href="{{ .Site.BaseURL }}">
 
