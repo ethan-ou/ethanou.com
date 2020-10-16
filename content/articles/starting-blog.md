@@ -44,13 +44,13 @@ I fought my way through [introductory courses](https://www.freecodecamp.org/), l
 
 It was in that period of my life where I learnt about [static site generators](https://jamstack.org/).
 
-Since 2015, the Web had been slowly changing under my feet. The introduction of [new versions of JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) meant developers had great features to write complicated websites out of the box. [Front-end libraries](https://reactjs.org/) and [frameworks](https://vuejs.org/) gave way to web apps, making fully-fledged web applications possible for all.
+Since 2015, the Web had been slowly changing under my feet. The introduction of [new versions of JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) meant developers had great features to write complicated websites out of the box. [Front-end libraries](https://reactjs.org/) and [frameworks](https://vuejs.org/) were starting to make fully-fledged web applications possible for all.
 
 And somewhere in those fields of innovation, the static site generator was gaining traction. 
 
-See, up until the mid-2015s, most websites had to run on servers, since a live computer was required to generate pages of the site. This made maintaining websites a struggle. Anything from a crash on the server, to a viral article and even a targeted attack could bring the website down.
+See, up until the mid-2015s most websites had to run on servers. Websites needed a live, running computer to generate pages for users to view. This live-ness made website maintenance a struggle. Anything from a crash on the server, to a viral article and even a targeted attack could bring the website down.
 
-Static site generators on the other hand, allowed you to generate your website *before* putting it online. This meant you never needed to worry about server issues, or live website crashes. 
+Static site generators on the other hand, allowed you to generate your website *before* putting it online. This meant you never needed to worry about server issues. Once hosted, the website you built was the website you'd get. 
 
 Even though adopting a static site generator was complicated to start with, it solved a lot of the problems I'd faced when trying to start my blog in 2015.  
 
