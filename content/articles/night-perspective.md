@@ -1,7 +1,7 @@
 ---
 title: A Simple Way to Gain Perspective
 date: 2020-10-14
-featured_image: "https://source.unsplash.com/ccTuLk6nNO8"
+featured_image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
 ---
 
 Recently, I stumbled into a way to gain some perspective if you're feeling lost, or want to reconnect with your core self.

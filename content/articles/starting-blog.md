@@ -1,7 +1,7 @@
 ---
 title: How I Started This Blog
 date: 2020-10-15
-featured_image: "https://source.unsplash.com/jxBrv6MkNxU"
+featured_image: "https://images.unsplash.com/photo-1602255193974-cab401499521?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
 ---
 
 For the last five years, I'd had the idea of starting a blog. This week, I finally made that dream a reality.
