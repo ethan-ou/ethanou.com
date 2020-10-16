@@ -18,7 +18,7 @@
     <br>
     <nav style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-gap: 1em 1em;">
         {{ if .PrevInSection }}
-            <a href="{{ .PrevInSection.Permalink }}">
+            <a href="{{ .PrevInSection.URL }}">
                 <div>
                     <p><b>&larr; Prev</b></p>
                     <p>{{ .PrevInSection.Title }}</p>
@@ -28,7 +28,7 @@
             <div></div>
             {{ end }}
             {{ if .NextInSection }}
-            <a href="{{ .NextInSection.Permalink }}" style="text-align: right">
+            <a href="{{ .NextInSection.URL }}" style="text-align: right">
                 <div>
                     <p><b>Next &rarr;</b></p>
                     <p>{{ .NextInSection.Title }}</p>
