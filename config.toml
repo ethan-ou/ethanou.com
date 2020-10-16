@@ -2,8 +2,6 @@ baseurl = "https://ethanou.com"
 languageCode = "en-us"
 title = "Ethan Ou"
 
-# canonifyurls = "true"
-relativeURLs = true
 paginate = 20
 publishDir = "docs" # if you use GitHub to deploy
 disqusShortname = "yourdisqusshortname"
