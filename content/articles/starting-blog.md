@@ -22,7 +22,7 @@ What I experienced in that month was constant frustration. The Web was complicat
 
 And while a couple of weeks later, I finally got the site looking right, I quickly stumbled into another challenge: what to write? I spent months with nothing on the blog, blocked on this seemingly minor problem.
 
-By the time the ideas started flowing, it had been a year. Hosting the website through Squarespace costed \$12AUD a month with \$25AUD a year spent on keeping the domain name. That meant a total of \$169AUD that year alone—equivalent to a month's worth of lunches as a student. It was a lot.
+By the time the ideas started flowing, it had been a year. Hosting the website through Squarespace costed $12AUD a month with $25AUD a year spent on keeping the domain name. That meant a total of $169AUD that year alone—equivalent to a month's worth of lunches as a student. It was a lot.
 
 When the yearly renewal process came again, my mum (who had been paying for the website through her credit card) suggested we take the website down. It was a lot of money to be spending for essentially nothing she said. 
 
@@ -40,19 +40,23 @@ In the past, I picked up skills as hobbies. I picked up filmmaking because I wan
 
 But Web development was a different beast. I picked it up because I wanted a skill that was useful to other people, not as something for enjoyment.  
 
-I fought my way through [introductory courses](https://www.freecodecamp.org/), learning HTML, CSS and JavaScript. I practiced those skills in small projects, open source contributions and even while working at a university.
+I fought my way through [introductory courses](https://www.freecodecamp.org/), learning how to build basic websites before moving on to modern web development tools. I practiced those skills in small projects, open source contributions and even while working at a university.
 
-It was in that period of my life where I learnt about [static site generators](https://jamstack.org/).  
+It was in that period of my life where I learnt about [static site generators](https://jamstack.org/).
 
 Since 2015, the Web had been slowly changing under my feet. The introduction of [new versions of JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) meant developers had great features to write complicated websites out of the box. [Front-end libraries](https://reactjs.org/) and [frameworks](https://vuejs.org/) gave way to web apps, making fully-fledged web applications possible for all.
 
-And somewhere in those fields of innovation, the static site generator was gaining traction. Instead of using a fully featured, complicated system like [Wordpress](https://wordpress.com/) or a closed-source website builder like Squarespace, a static site generator allowed you to build a website like it was the early 2000s, with a few modern tools to make things easier.  
+And somewhere in those fields of innovation, the static site generator was gaining traction. 
 
-Even though using a static site generator was complicated to start with, it solved a lot of the problems I'd faced when I tried to start my blog the first time in 2015.  
+See, up until the mid-2015s, most websites had to run on servers, since a live computer was required to generate pages of the site. This made maintaining websites a struggle. Anything from a crash on the server, to a viral article and even a targeted attack could bring the website down.
 
-For starters, hosting became a completely trivial problem. Static sites were so lean that [many hosting companies](https://www.netlify.com/) were able to [host your website for free](https://vercel.com/). No monthly subscription. No credit card. And the load times for your website were always blazing fast.  
+Static site generators on the other hand, allowed you to generate your website *before* putting it online. This meant you never needed to worry about server issues, or live website crashes. 
 
-You also had the benefit of two technologies that worked in tandem: [Markdown](https://www.markdownguide.org/), and [git](https://git-scm.com/) + [Github](https://github.com/). Markdown allowed you to write articles in an open-source, plain-text format that could survive for decades. And git allowed you to add your files to Github, giving you the power to try new ideas, track changes and keep a full history of your website, without worrying about losing something.  
+Even though adopting a static site generator was complicated to start with, it solved a lot of the problems I'd faced when trying to start my blog in 2015.  
+
+For starters, hosting became a completely trivial problem. Static sites were so lean that [many hosting companies](https://www.netlify.com/) were able to [host your website for free](https://vercel.com/). No monthly subscription. No credit card. And the load times for your website were always blazing fast.
+
+You also had the benefit of two technologies that worked in tandem: [Markdown](https://www.markdownguide.org/), and [git](https://git-scm.com/) + [Github](https://github.com/). Markdown allowed you to write articles in a format that was simple for humans *and* computers to read, and when combined with git + Github, gave me the freedom to try new ideas, track changes and keep a full history of the site while using one of the most battle-hardened tools in software development.
 
 Last but not least, static site generators forced me to commit to choices I could sustain for the next 5, 10 or 20 years. It made me think about the structure of the website, the ease of maintenance in the long-term and the technologies I wanted to go the distance with.  
 
