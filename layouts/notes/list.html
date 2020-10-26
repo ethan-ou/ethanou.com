@@ -1,0 +1,13 @@
+{{ define "title" }}
+    {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<div>
+    <h2>{{ .Title }}</h2>
+        {{ $paginator := .Paginator }}
+        {{ range $paginator.Pages }}
+        <p>{{.Content}}</p>
+        {{ end }}
+        {{ partial "pagination.html" . }}
+</div>
+{{ end }}
