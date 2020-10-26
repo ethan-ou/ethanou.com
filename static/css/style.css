@@ -37,6 +37,29 @@ hr {
   color: #767676
 }
 
+/* Top Navigation Bar */
+.header-nav {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 1.2em;
+  max-width: 40rem;
+}
+
+
+@media screen and (min-width: 30em) {
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header-nav h1 {
+    margin-right: 2rem;
+  }
+}
+
 /* Footer font size & margin */
 body > footer {
   margin-top: 4em;
