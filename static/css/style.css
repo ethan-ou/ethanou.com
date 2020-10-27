@@ -183,6 +183,17 @@ article header p {
   }
 }
 
+/* Separator */
+.separator {
+  color: #767676;
+}
+
+@media (prefers-color-scheme: dark) {
+  .separator {
+    color: hsl(194, 15%, 49%);
+  }
+}
+
 /* Code Block Styling */
 code {
   padding: 2px 4px;

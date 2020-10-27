@@ -2,11 +2,18 @@
     {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
+
+
 <div>
     <h2>{{ .Title }}</h2>
-        {{ $paginator := .Paginator }}
-        {{ range $paginator.Pages }}
-        <p>{{.Content}}</p>
+        {{ $pages := (.Paginator.Pages).Reverse }}
+        {{ $len := (len $pages) }}
+        
+        {{ range $index, $page := $pages }}
+        <p>{{$page.Content}}</p>
+        {{ if ne (add $index 1) $len }}
+        <div role="separator" class="separator" style="text-align: center; letter-spacing: 0.5rem">***</div>
+        {{ end }}
         {{ end }}
         {{ partial "pagination.html" . }}
 </div>
