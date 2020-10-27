@@ -22,4 +22,17 @@
         <br>
         
     </section>
+    <br>
+    <section>
+        <h3>Latest Notes: 
+            <small style="margin-left: 2rem; text-align: center;">
+                <a href="/notes">See all &rarr;</a>
+            </small>
+        </h3>
+        {{ $notePages := first 5 (where site.RegularPages.ByDate.Reverse "Section" "notes") }}
+        {{ $noteLen := (len $notePages) }}
+        {{ range $index, $page := $notePages }}
+        <p>{{$page.Content}}</p>
+        {{ end }}
+    </section>
 </div>
