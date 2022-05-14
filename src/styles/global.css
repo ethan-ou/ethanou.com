@@ -12,10 +12,6 @@
   height: 60vh;
 }
 
-.h-screen-75 {
-  height: 75vh;
-}
-
 .main-container {
-  @apply container px-4 mx-auto;
+  @apply px-4 mx-auto container lg:max-w-5xl;
 }
