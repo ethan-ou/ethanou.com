@@ -1,4 +1,33 @@
-<nav class="nav">
+<script>
+  let menu = false;
+</script>
+
+<div class="sticky border-b border-slate-900/20 inset-x-0 top-0 z-30 bg-white">
+  <nav
+    class="main-container flex items-center relative py-3 justify-between text-slate-800"
+  >
+    <a class="text-xl font-bold pb-0.5 hover:text-slate-500" href="/"
+      >Ethan Ou</a
+    >
+    <button class="w-5 h-5 xs:hidden " on:click={() => (menu = !menu)}>
+      <svg width="24" height="24"
+        ><path
+          d="M5 6h14M5 12h14M5 18h14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        /></svg
+      >
+    </button>
+    <div class="hidden xs:flex items-center space-x-6 text-l font-semibold">
+      <a href="/portfolio" class="hover:text-slate-500">Portfolio</a>
+      <a href="/about" class="hover:text-slate-500">About</a>
+    </div>
+  </nav>
+</div>
+
+<!-- <nav class="nav">
   <a class="logolink" href="/">
     <div class="monogram">JW</div>
   </a>
@@ -100,4 +129,4 @@
   fill: var(--t-active);
 }
 
-</style>
+</style> -->
