@@ -1,6 +1,7 @@
 ---
 import PortfolioGrid from '../components/PortfolioGrid.jsx';
 import Main from '../layouts/main.astro';
+import Gradient from "../components/Gradient.astro";
 
 const portfolio = (await Astro.glob('./portfolio/**/*.md')).map((item) => {
 	return {...item.frontmatter, href: item.url}
@@ -8,10 +9,15 @@ const portfolio = (await Astro.glob('./portfolio/**/*.md')).map((item) => {
 ---
 
 <Main title="Home" description="Home of Ethan Ou">
-	<div class="flex items-center main-container h-screen-60">
-		<div class="max-w-xl">
-			<h1 class="font-bold text-4xl">Hey, I’m Ethan - Media and Technology from Sydney.</h1>
-			<p class="pt-6 text-lg">Currently working in Education.</p>
+	<div class=" flex items-center h-screen-60">	
+		<div class="absolute">
+			<Gradient />
+		</div>
+		<div class="main-container z-10">
+			<div class="max-w-xl">
+				<h1 class="font-bold text-4xl">Hey, I’m Ethan - Media and Technology from Sydney.</h1>
+				<p class="pt-6 text-lg">Currently working in Education.</p>
+			</div>
 		</div>
 	</div>
 	<div class="main-container">
