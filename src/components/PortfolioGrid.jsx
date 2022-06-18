@@ -8,7 +8,8 @@ export default function PortfolioGrid({ items }) {
           <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
             <HoverVideoPlayer
               videoSrc={item.video}
-              className="w-full h-full object-center object-cover"
+              className="w-full h-full"
+              sizingMode="container"
               pausedOverlay={
                 <img
                   src={item.img}

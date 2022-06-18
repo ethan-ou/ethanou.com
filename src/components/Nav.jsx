@@ -47,7 +47,7 @@ function MenuIcon() {
 
 export default function Nav() {
   return (
-    <div className="sticky border-b border-slate-900/20 inset-x-0 top-0 z-30 bg-white">
+    <div className="sticky border-b border-slate-900/20 inset-x-0 top-0 z-30 backdrop-blur-xl bg-white/60">
       <Disclosure
         as="nav"
         className="main-container relative py-3 text-slate-800"
