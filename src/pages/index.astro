@@ -1,27 +1,30 @@
 ---
-import PortfolioGrid from '../components/PortfolioGrid.jsx';
-import Main from '../layouts/main.astro';
+import { getCollection } from 'astro:content';
 
-const portfolio = (await Astro.glob('./portfolio/**/*.md')).map((item) => {
-	return { ...item.frontmatter, href: item.url }
-}).reverse()
+import PortfolioGrid from "../components/PortfolioGrid.jsx";
+import Main from "../layouts/main.astro";
+
+const portfolio = (await getCollection('portfolio'))
+  .map((item) => {
+    return { ...item.data, href: `/portfolio/${item.slug}` };
+  })
+  .reverse();
 ---
 
 <Main title="Home" description="Home of Ethan Ou">
-	<div class="flex items-center h-screen-60 bg-[url('/assets/mesh-gradient-main.jpg')] bg-cover">
-		<div class="main-container">
-			<div class="max-w-xl">
-				<h1 class="font-bold text-5xl text-white">Hey, I’m Ethan.</h1>
-				<p class="pt-3 text-xl text-white">A media and tech generalist, I currently work on improving hybrid
-					technology
-					at
-					UNSW. Also an occasional
-					freelance videographer and hobbyist developer. </p>
-			</div>
-		</div>
-	</div>
-	<div class="main-container mt-12">
-		<h2 class="font-bold text-3xl">Portfolio</h2>
-		<PortfolioGrid client:load items={portfolio} />
-	</div>
+  <div class="flex items-center pt-24">
+    <div class="main-container mt-10">
+      <div class="max-w-xl">
+        <h1 class="font-bold text-5xl text-black">Hey, I’m Ethan.</h1>
+        <p class="pt-3 text-xl text-black">
+          I'm a freelance videographer based in Sydney, Australia creating videos for small businesses
+          and startups.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="main-container mt-12 pt-10">
+    <h2 class="font-bold text-3xl">Portfolio</h2>
+    <PortfolioGrid client:load items={portfolio} />
+  </div>
 </Main>

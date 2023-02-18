@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 
 const navigation = [
   { name: "Portfolio", href: "/portfolio" },
-  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 function XIcon() {

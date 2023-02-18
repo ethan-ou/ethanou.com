@@ -8,10 +8,6 @@
   }
 }
 
-.h-screen-60 {
-  height: 60vh;
-}
-
 .main-container {
   @apply px-4 mx-auto container lg:max-w-5xl;
 }

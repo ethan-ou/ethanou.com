@@ -7,7 +7,7 @@ export default function PortfolioGrid({ items }) {
         <a href={item.href} key={item.title} className="group relative">
           <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
             <HoverVideoPlayer
-              videoSrc={item.video}
+              videoSrc={item.preview}
               className="w-full h-full"
               sizingMode="container"
               pausedOverlay={
