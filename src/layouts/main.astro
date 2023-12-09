@@ -11,8 +11,9 @@ const { title, description } = Astro.props;
 		<Head title={title} description={description} />
 	</head>
 	<body class="sans">
-		<Nav client:load/>
+		<!-- Temporarily Disable Nav -->
+		<!-- <Nav client:load/> -->
 		<slot />
-		<Footer />
+		<!-- <Footer /> -->
 	</body>
 </html>
