@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+.main-container {
+  @apply px-4 mx-auto container lg:max-w-5xl;
+}
+
+#gradient-canvas {
+  @apply w-full h-full;
+  --gradient-color-1: #c3e4ff;
+  --gradient-color-2: #a4d4f0;
+  --gradient-color-3: #ffe2ef;
+  --gradient-color-4: #e2b9ff;
+}

@@ -1,0 +1,21 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import Main from '../layouts/main.astro';
+
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import PortfolioGrid from '../components/PortfolioGrid';
+
+const portfolio = (await getCollection('portfolio'))
+  .map((item) => {
+    return { ...item.data, href: `/portfolio/${item.slug}` };
+  })
+  .reverse();
+---
+
+<Main title="Portfolio" description="Ethan's Portfolio">
+	<div class="main-container pt-10">
+		<h1 class="font-bold text-3xl text-black">Portfolio</h1>
+		<PortfolioGrid client:load items={portfolio} />
+	</div>
+</Main>
+		
